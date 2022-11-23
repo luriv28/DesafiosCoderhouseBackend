@@ -40,6 +40,7 @@ class Contenedor {
         console.log("null");
       } else {
         console.log("Producto con id", id, product);
+        return product;
       }
     } catch (err) {
       throw new Error("No ha sido encontrado un producto con ese ID");
