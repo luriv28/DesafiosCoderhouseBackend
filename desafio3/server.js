@@ -6,7 +6,7 @@ const PORT = 8080;
 const server = app.listen(process.env.PORT || PORT, () => {
   console.log(`server listening on port ${PORT}`);
 });
-y;
+
 server.on(`error`, (err) => console.log(`error: ${err}`));
 
 const products = new Contenedor("products.txt");

@@ -1,13 +1,13 @@
 const { Router } = require("express");
 const express = require("express");
 const multer = require("multer");
-const Contenedor = require("./d2_contenedor.js");
+const Contenedor = require("../desafio2/test");
 
 app = express();
 
 //declaracion de uso de json, direccion de elementos estaticos y urlencoded
 app.use(express.json());
-app.use(express.static(__dirname + "/public"));
+app.use("/static", express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: true }));
 
 const routerProducto = express.Router();
