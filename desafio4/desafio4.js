@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const express = require("express");
 const multer = require("multer");
-const Contenedor = require("../desafio2/test");
+const Contenedor = require("../desafio2/main.js");
 
 app = express();
 
@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const routerProducto = express.Router();
 
-const c1 = new Contenedor("./productos.txt");
+const c1 = new Contenedor("./desafio2/productos.txt");
 
 //Rutas
 
@@ -27,7 +27,7 @@ routerProducto.get("/:id", (req, res) => {
     if (data == undefined) {
       return res.send({ error: "producto no encontrado" });
     }
-    res.send(data);
+    res.json(data);
   });
 });
 
