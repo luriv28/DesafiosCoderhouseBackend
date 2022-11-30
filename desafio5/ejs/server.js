@@ -1,7 +1,5 @@
 const express = require("express");
 const fs = require("fs");
-const handlebars = require("express-handlebars");
-const { ppid } = require("process");
 
 const app = express();
 app.use(express.json());
@@ -165,23 +163,14 @@ class Contenedor {
 const productosContenedor = new Contenedor("productos.txt");
 
 //PLANTILLAS
-app.engine(
-  "handlebars",
-  handlebars.engine({
-    layoutsDir: __dirname + "/views/layouts/",
-    partialsDir: __dirname + "/views/partials/",
-  })
-);
-app.set("view engine", "handlebars");
-app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
 
 //GET
 app.get("/productos", async (req, res) => {
   try {
     const productos = await productosContenedor.getAll();
-    res.render("desafio5", {
-      layout: "index",
-      pageTitle: "Desafio 5 - Handlebars",
+    res.render("index", {
+      pageTitle: "Desafio5 - Ejs",
       productos: productos,
     });
   } catch (error) {
