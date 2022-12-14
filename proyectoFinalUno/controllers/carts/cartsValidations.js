@@ -21,11 +21,9 @@ export function existsProductInCart(req, res, next) {
   const cartProducts = cartContainer.getById(req.params.id).productos;
   const prod = cartProducts.filter((prod) => prod.id == req.params.id_prod);
   prod.length == 0
-    ? res
-        .status(401)
-        .json({
-          error: -3,
-          descripcion: "This product doesn't exists in this cart",
-        })
+    ? res.status(401).json({
+        error: -3,
+        descripcion: "This product doesn't exists in this cart",
+      })
     : next();
 }
