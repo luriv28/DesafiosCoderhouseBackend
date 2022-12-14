@@ -6,7 +6,7 @@ import {
   postProducts,
   putProducts,
   deleteProducts,
-} from "./controllers/products/productsHandlers.js";
+} from "../controllers/products/productsHandlers.js";
 
 import {
   validId,
