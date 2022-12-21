@@ -9,6 +9,7 @@ const httpServer = new HttpServer(app);
 const io = new IOServer(httpServer);
 
 app.use(express.static("./public"));
+
 //PLANTILLAS
 app.set("view engine", "ejs");
 
