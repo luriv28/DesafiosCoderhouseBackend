@@ -4,7 +4,7 @@ export const optionsSql = {
     host: "localhost",
     user: "root",
     password: "",
-    database: "coder_desafio_07",
+    database: "coder_desafio_7",
   },
 };
 
