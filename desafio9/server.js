@@ -18,6 +18,7 @@ const io = new IOServer(httpServer);
 app.use(express.static("./public"));
 //PLANTILLAS
 app.set("view engine", "ejs");
+app.set("views", "desafio9/views");
 
 const productosContenedor = new SqlContainer(optionsSql, "products");
 //const mensajesContenedor = new SqlContainer(optionsSqlite, "messages");
