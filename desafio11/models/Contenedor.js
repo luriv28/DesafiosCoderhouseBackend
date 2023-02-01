@@ -14,9 +14,7 @@ export default class Contenedor {
     this.nombreArchivo = nombreArchivo;
     if (existsSync(nombreArchivo)) {
       console.log("Existen productos, importandolos...");
-      this.arrayObj = JSON.parse(
-        JSON.stringify(readFileSync(this.nombreArchivo, "utf-8"))
-      );
+      this.arrayObj = JSON.parse(readFileSync(this.nombreArchivo, "utf-8"));
       this.nextId = this.#getNextId();
     } else {
       console.log("No existe archivo de productos, creandolo...");
