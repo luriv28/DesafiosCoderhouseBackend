@@ -3,7 +3,7 @@ export function getLogin(req, res) {
   req.isAuthenticated()
     ? res.redirect("/productos-test")
     : res.render("index", {
-        pageTitle: "Desafio9 - Faker/Normalizacion",
+        pageTitle: "Desafio 09 - Faker/Normalizacion",
         partial: "./partials/login",
       });
 }
@@ -14,7 +14,7 @@ export function postLogin(req, res) {
 
 export function getLoginError(req, res) {
   res.render("index", {
-    pageTitle: "Desafio9 - Faker/Normalizacion",
+    pageTitle: "Desafio 09 - Faker/Normalizacion",
     partial: "./partials/messageWindow",
     title: "Error",
     message: "We have in error in the Login, try again",
@@ -25,14 +25,14 @@ export function getLoginError(req, res) {
 
 export function getRegister(req, res) {
   res.render("index", {
-    pageTitle: "Desafio9 - Faker/Normalizacion",
+    pageTitle: "Desafio 09 - Faker/Normalizacion",
     partial: "./partials/register",
   });
 }
 
 export function getRegisterError(req, res) {
   res.render("index", {
-    pageTitle: "Desafio9 - Faker/Normalizacion",
+    pageTitle: "Desafio 09 - Faker/Normalizacion",
     partial: "./partials/messageWindow",
     title: "Error",
     message: "The user already exists",

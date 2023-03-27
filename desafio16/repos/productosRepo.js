@@ -7,8 +7,8 @@ export default class ProductosRepo {
     this.factory = ProductosDAOFactory.getInstance();
     this.dao = this.factory.getDao();
 
-    // SI DESCONMENTO ESTO AL INSTANCIAR LA CLASE, SE CREA UNA DATE CON EL TIMESTAMP
-    // SI SE VUELVE A INSTANCIAR Y COMPARO, LAS DATES SON IGUALES ENTONCES ES LA MISMA INSTANCIA.
+    // SI DESCONMENTAS ESTO AL INSTANCIAR LA CLASE, CREA UN DATE CON EL TIMESTAMP
+    // SI LA VUELVO A INSTANCIAR Y COMPARO LOS DATES SON INGUALES ENTONCES ES LA MISMA INSTANCIA.
 
     // console.log(this.factory.date)
     // this.factory2 = ProductosDAOFactory.getInstance();
